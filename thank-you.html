@@ -393,9 +393,8 @@
 			window.addEventListener("load", (event) => {
 				setTimeout(() => {
 					window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop');
-					setTimeout(() => {
-						window.history.pushState(null, null, window.location.origin + window.location.pathname + '?foo=bar');
-					}, 1000);
+
+					window.location.reload();
 				}, 1000);
 			});
 		</script>
