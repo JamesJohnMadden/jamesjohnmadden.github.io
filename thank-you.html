@@ -392,11 +392,9 @@
 		<script type="text/javascript">
 			// Safari Redirect Fix
 			window.addEventListener("load", (event) => {
-				if (!window.location.search.includes('fiz')) {
-					setTimeout(() => {
-						window.history.pushState(null, null, `${window.location.origin + window.location.pathname}?submitted=${Date.now()}`);
-					}, 300);	
-				}
+				setTimeout(() => {
+					window.history.pushState(null, null, `${window.location.origin + window.location.pathname}?submitted=${Date.now()}`);
+				}, 300);
 			});
 		</script>
         <script type="text/javascript">
