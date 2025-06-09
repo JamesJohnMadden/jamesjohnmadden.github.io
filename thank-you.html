@@ -388,6 +388,10 @@
                 document.documentElement.initCustomerAccountsModels++
             }
         </script>
+	<script type="text/javascript">
+		// Safari Redirect Fix
+		history.pushState(null, null, window.location.href + '?foo=bar');
+	</script>
         <script type="text/javascript">
             _W = _W || {};
             _W.securePrefix = 'www.speedeebeer.com';
