@@ -392,8 +392,12 @@
 			// Safari Redirect Fix
 			window.addEventListener("load", (event) => {
 				setTimeout(() => {
-					window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop')
-				}, 2000);
+					window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop');
+				}, 1000);
+				
+				setTimeout(() => {
+					window.history.pushState(null, null, window.location.origin + window.location.pathname + '?foo=bar');
+				}, 1000);
 			});
 		</script>
         <script type="text/javascript">
