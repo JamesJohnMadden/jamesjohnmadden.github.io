@@ -393,7 +393,7 @@
 			window.addEventListener("load", (event) => {
 				if (!window.location.search.includes('fiz')) {
 					setTimeout(() => {
-						window.history.pushState(null, null, `${window.location.origin + window.location.pathname}?submitted=${Date.now()}`);
+						window.history.replaceState(null, null, `${window.location.origin + window.location.pathname}?submitted=${Date.now()}`);
 					}, 300);	
 				}
 			});
