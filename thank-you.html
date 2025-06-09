@@ -391,11 +391,12 @@
 		<script type="text/javascript">
 			// Safari Redirect Fix
 			window.addEventListener("load", (event) => {
-				setTimeout(() => {
-					window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop');
-
-					window.location.reload();
-				}, 1000);
+				if (!window.location.search.includes('fiz')) {
+					setTimeout(() => {
+						window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop');
+						window.location.reload();
+					}, 1000);	
+				}
 			});
 		</script>
         <script type="text/javascript">
