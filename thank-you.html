@@ -393,9 +393,8 @@
 			window.addEventListener("load", (event) => {
 				if (!window.location.search.includes('fiz')) {
 					setTimeout(() => {
-						window.history.pushState(null, null, window.location.origin + window.location.pathname + '?fiz=pop');
-						window.location.reload();
-					}, 1000);	
+						window.history.pushState(null, null, `${window.location.origin + window.location.pathname}?submitted=${Date.now()}`);
+					}, 300);	
 				}
 			});
 		</script>
